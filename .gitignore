@@ -62,5 +62,19 @@ __history/
 __recovery/
 *.~*
 
+# 
+bin
+dcu/
+install/
+Win32/
+Win64/
+Debug/
+Release/
+*.dproj
+*.otares
+*.skincfg
+*.stat
+*.dcu
+
 # Castalia statistics file (since XE7 Castalia is distributed with Delphi)
 *.stat

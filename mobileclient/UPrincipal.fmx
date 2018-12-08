@@ -1,0 +1,300 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 600
+  ClientWidth = 435
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  DesignerMasterStyle = 3
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TDynamicAppearance'
+    ItemEditAppearanceClassName = 'TDynamicAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Client
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Size.Width = 425.000000000000000000
+    Size.Height = 260.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Codigo'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Width = 101.000000000000000000
+        Appearance.Height = 22.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Descricao'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Width = 256.000000000000000000
+        Appearance.Height = 22.000000000000000000
+        Appearance.PlaceOffset.X = 100.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Quantidade'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Width = 110.000000000000000000
+        Appearance.Height = 22.000000000000000000
+        Appearance.PlaceOffset.X = 100.000000000000000000
+        Appearance.PlaceOffset.Y = 20.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Valor'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Width = 145.000000000000000000
+        Appearance.Height = 22.000000000000000000
+        Appearance.PlaceOffset.X = 210.000000000000000000
+        Appearance.PlaceOffset.Y = 20.000000000000000000
+      end>
+    ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Text1'
+        AppearanceClassName = 'TTextObjectAppearance'
+      end>
+  end
+  object btnEnviar: TButton
+    Align = Bottom
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 551.000000000000000000
+    Size.Width = 425.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Enviar'
+    OnClick = btnEnviarClick
+  end
+  object Venda: TGroupBox
+    Align = Top
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 5.000000000000000000
+    Size.Width = 425.000000000000000000
+    Size.Height = 266.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Venda'
+    TabOrder = 6
+    object CbxProduto: TComboBox
+      Position.X = 10.000000000000000000
+      Position.Y = 210.000000000000000000
+      Size.Width = 216.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Produto: TLabel
+        Position.Y = -26.000000000000000000
+        Text = 'Produto'
+        TabOrder = 0
+      end
+    end
+    object edtQuantidade: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 4
+      KeyboardType = NumberPad
+      Text = '1'
+      Position.X = 240.000000000000000000
+      Position.Y = 210.000000000000000000
+      Size.Width = 111.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      object Label1: TLabel
+        Position.Y = -26.000000000000000000
+        Size.Width = 96.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Quantidade'
+        TabOrder = 0
+      end
+    end
+    object edtNumeroNota: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 3
+      KeyboardType = NumberPad
+      Text = '50000'
+      Position.X = 10.000000000000000000
+      Position.Y = 45.000000000000000000
+      Size.Width = 111.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      object Label2: TLabel
+        Position.Y = -26.000000000000000000
+        Size.Width = 96.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Numero'
+        TabOrder = 0
+      end
+    end
+    object edtNome: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Text = 'REGYS BORGES DA SILVEIRA'
+      Position.X = 10.000000000000000000
+      Position.Y = 105.000000000000000000
+      Size.Width = 396.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      object Label3: TLabel
+        Position.Y = -26.000000000000000000
+        Size.Width = 96.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Nome'
+        TabOrder = 0
+      end
+    end
+    object edtCPF: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      KeyboardType = NumberPad
+      Text = '84915170659'
+      Position.X = 135.000000000000000000
+      Position.Y = 45.000000000000000000
+      Size.Width = 271.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      object Label4: TLabel
+        Position.Y = -26.000000000000000000
+        Size.Width = 96.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Numero'
+        TabOrder = 0
+      end
+    end
+  end
+  object btnAdicionar: TButton
+    Position.X = 360.000000000000000000
+    Position.Y = 200.000000000000000000
+    Size.Width = 48.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'additembutton'
+    TabOrder = 12
+    OnClick = btnAdicionarClick
+  end
+  object Produtos: TButton
+    Position.X = 340.000000000000000000
+    Position.Y = 10.000000000000000000
+    Size.Width = 86.000000000000000000
+    Size.Height = 31.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 18
+    Text = 'Produtos'
+    OnClick = ProdutosClick
+  end
+  object tbVenda: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 320
+    Top = 390
+    object tbVendaId: TIntegerField
+      FieldName = 'Id'
+    end
+    object tbVendaDescricao: TStringField
+      FieldName = 'Descricao'
+      Size = 50
+    end
+    object tbVendaValor: TFloatField
+      FieldName = 'Valor'
+    end
+    object tbVendaQuantidade: TIntegerField
+      FieldName = 'Quantidade'
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = tbVenda
+    ScopeMappings = <>
+    Left = 320
+    Top = 340
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 320
+    Top = 440
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      Control = ListView1
+      FillExpressions = <
+        item
+          SourceMemberName = 'Id'
+          ControlMemberName = 'Codigo'
+        end
+        item
+          SourceMemberName = 'Descricao'
+          ControlMemberName = 'Descricao'
+        end
+        item
+          SourceMemberName = 'Valor'
+          ControlMemberName = 'Valor'
+        end
+        item
+          SourceMemberName = 'Quantidade'
+          ControlMemberName = 'Quantidade'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkListControlToField2: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'descricao'
+      Control = CbxProduto
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object tbListaProdutos: TFDMemTable
+    AfterOpen = tbListaProdutosAfterOpen
+    FieldDefs = <>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvPersistent, rvSilentMode]
+    ResourceOptions.Persistent = True
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired]
+    UpdateOptions.CheckRequired = False
+    StoreDefs = True
+    Left = 60
+    Top = 335
+    object tbListaProdutosid: TIntegerField
+      FieldName = 'id'
+    end
+    object tbListaProdutosdescricao: TStringField
+      FieldName = 'descricao'
+      Size = 50
+    end
+    object tbListaProdutosvalor: TFloatField
+      FieldName = 'valor'
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = tbListaProdutos
+    ScopeMappings = <>
+    Left = 320
+    Top = 295
+  end
+end

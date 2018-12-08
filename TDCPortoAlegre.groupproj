@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{7532F2A8-252A-4EF8-8C97-16278A3AC9E9}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="mobileclient\VendaMobile.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="server\NFCeServer.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="VendaMobile">
+        <MSBuild Projects="mobileclient\VendaMobile.dproj"/>
+    </Target>
+    <Target Name="VendaMobile:Clean">
+        <MSBuild Projects="mobileclient\VendaMobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VendaMobile:Make">
+        <MSBuild Projects="mobileclient\VendaMobile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="NFCeServer">
+        <MSBuild Projects="server\NFCeServer.dproj"/>
+    </Target>
+    <Target Name="NFCeServer:Clean">
+        <MSBuild Projects="server\NFCeServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="NFCeServer:Make">
+        <MSBuild Projects="server\NFCeServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="VendaMobile;NFCeServer"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="VendaMobile:Clean;NFCeServer:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="VendaMobile:Make;NFCeServer:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
